@@ -1,9 +1,9 @@
-# 🧾 Sistema POS (Point of Sale)
+#  Sistema POS (Point of Sale)
 ## Informe Técnico del Sistema
 
 ---
 
-## 📌 1. Introducción
+## 1. Introducción
 
 El presente informe describe el desarrollo de un sistema POS (Point of Sale), diseñado para gestionar operaciones comerciales básicas como ventas, control de productos, manejo de clientes y administración de usuarios.
 
@@ -11,7 +11,7 @@ El sistema ha sido desarrollado utilizando tecnologías modernas como ASP.NET MV
 
 ---
 
-## 🎯 2. Objetivo del Sistema
+##  2. Objetivo del Sistema
 
 El objetivo principal del sistema es facilitar la gestión de ventas en un entorno comercial, permitiendo:
 
@@ -23,43 +23,43 @@ El objetivo principal del sistema es facilitar la gestión de ventas en un entor
 
 ---
 
-## 🧱 3. Arquitectura del Sistema
+## 3. Arquitectura del Sistema
 
 El sistema está estructurado bajo el patrón MVC (Modelo - Vista - Controlador), lo que permite separar responsabilidades y mejorar la mantenibilidad del código.
-
+```
 POS.Web
 │
 ├── Models → Representación de entidades (POO)
 ├── Views → Interfaz de usuario (Razor)
 ├── Controllers → Lógica de control
 ├── Data → Acceso a datos (DbContext)
+```
 
+###  Descripción de Componentes
 
-### 🔹 Descripción de Componentes
-
-#### 📦 Models
+####  Models
 - Representan las entidades del sistema (tablas de la base de datos).
 - Se utilizan en Entity Framework para mapear datos.
 - Aplican Programación Orientada a Objetos.
 
-#### 🎮 Controllers
+####  Controllers
 - Gestionan la lógica del sistema.
 - Reciben solicitudes del usuario desde las vistas.
 - Procesan datos y devuelven respuestas.
 
-#### 🖥️ Views
+####  Views
 - Representan la interfaz de usuario.
 - Permiten visualizar y capturar datos.
 - Utilizan Razor para integrar lógica con HTML.
 
-#### 🗃️ Data (DbContext)
+####  Data (DbContext)
 - Conecta el sistema con la base de datos.
 - Permite realizar operaciones CRUD.
 - Gestiona las entidades mediante Entity Framework.
 
 ---
 
-## 🗄️ 4. Modelo de Base de Datos
+##  4. Modelo de Base de Datos
 
 El sistema utiliza una base de datos relacional normalizada, compuesta por las siguientes tablas:
 
@@ -71,9 +71,9 @@ El sistema utiliza una base de datos relacional normalizada, compuesta por las s
 
 ---
 
-## 🔗 5. Relaciones entre Tablas
+##  5. Relaciones entre Tablas
 
-### ✅ Relaciones 1 a Muchos (1:N)
+###  Relaciones 1 a Muchos (1:N)
 
 1. **Usuarios → Ventas**
    - Un usuario puede realizar múltiples ventas.
@@ -93,7 +93,7 @@ El sistema utiliza una base de datos relacional normalizada, compuesta por las s
 
 ---
 
-### 🔁 Relación Muchos a Muchos (N:M)
+###  Relación Muchos a Muchos (N:M)
 
 **Ventas ↔ Productos**
 
@@ -102,7 +102,7 @@ El sistema utiliza una base de datos relacional normalizada, compuesta por las s
 
 ---
 
-## 🧠 6. Diagrama de Base de Datos (Mermaid)
+##   Diagrama de Base de Datos (Mermaid)
 
 ```mermaid
 erDiagram
@@ -114,7 +114,7 @@ PRODUCTOS ||--o{ DETALLEVENTAS : incluido
 
 USUARIOS {
     int Id PK
-    string Nombre
+    string Nombre 
     string Email
     string Rol
     bool Activo
@@ -155,25 +155,25 @@ DETALLEVENTAS {
 
 ---
 
-## 🧩 7. Explicación de las Tablas
+##  Explicación de las Tablas
 
-### 🧍 Usuarios
+###  Usuarios
 
 Almacena la información de los empleados del sistema (administradores y cajeros).
 
-### 👥 Clientes
+###  Clientes
 
 Registra los clientes que realizan compras. Puede ser opcional en algunas ventas.
 
-### 🛒 Productos
+###  Productos
 
 Contiene los productos disponibles, incluyendo precio, stock y estado.
 
-### 🧾 Ventas
+###  Ventas
 
 Representa cada transacción realizada en el sistema.
 
-### 📄 DetalleVentas
+###  DetalleVentas
 
 Desglosa los productos incluidos en cada venta, permitiendo manejar múltiples productos por transacción.
 
@@ -189,9 +189,9 @@ Desglosa los productos incluidos en cada venta, permitiendo manejar múltiples p
 
 ---
 
-## 💻 9. Ejemplo de Componentes
+##  Ejemplo de Componentes
 
-### 📦 Modelo (Model)
+###  Modelo (Model)
 
 ```csharp
 public class Producto
@@ -219,7 +219,7 @@ public IActionResult Index()
 
 ---
 
-### 🗃️ DbContext
+###  DbContext
 
 ```csharp
 public DbSet<Producto> Productos { get; set; }
@@ -227,7 +227,7 @@ public DbSet<Producto> Productos { get; set; }
 
 ---
 
-### 🖥️ Vista (View)
+###  Vista (View)
 
 Ejemplo conceptual:
 
@@ -237,7 +237,7 @@ Ejemplo conceptual:
 
 ---
 
-## ✅ 10. Buenas Prácticas Implementadas
+##  10. Buenas Prácticas Implementadas
 
 * Uso del patrón MVC
 * Separación de responsabilidades
@@ -248,7 +248,7 @@ Ejemplo conceptual:
 
 ---
 
-## ⚠️ 11. Posibles Mejoras
+## Posibles Mejoras
 
 * Implementar encriptación de contraseñas
 * Automatizar el cálculo del total de ventas
@@ -258,7 +258,7 @@ Ejemplo conceptual:
 
 ---
 
-## 🎯 12. Conclusión
+##  Conclusión
 
 El sistema POS desarrollado cumple con los principios fundamentales del desarrollo de software moderno, integrando una arquitectura clara, una base de datos bien estructurada y una implementación funcional en ASP.NET MVC.
 
