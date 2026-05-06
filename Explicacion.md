@@ -1,9 +1,9 @@
-#  Sistema POS (Point of Sale)
+#  Sistema POS 
 ## Informe Técnico del Sistema
 
 ---
 
-## 1. Introducción
+##  Introducción
 
 El presente informe describe el desarrollo de un sistema POS (Point of Sale), diseñado para gestionar operaciones comerciales básicas como ventas, control de productos, manejo de clientes y administración de usuarios.
 
@@ -11,7 +11,7 @@ El sistema ha sido desarrollado utilizando tecnologías modernas como ASP.NET MV
 
 ---
 
-##  2. Objetivo del Sistema
+##   Objetivo del Sistema
 
 El objetivo principal del sistema es facilitar la gestión de ventas en un entorno comercial, permitiendo:
 
@@ -23,7 +23,7 @@ El objetivo principal del sistema es facilitar la gestión de ventas en un entor
 
 ---
 
-## 3. Arquitectura del Sistema
+##  Arquitectura del Sistema
 
 El sistema está estructurado bajo el patrón MVC (Modelo - Vista - Controlador), lo que permite separar responsabilidades y mejorar la mantenibilidad del código.
 ```
@@ -59,7 +59,7 @@ POS.Web
 
 ---
 
-##  4. Modelo de Base de Datos
+##   Modelo de Base de Datos
 
 El sistema utiliza una base de datos relacional normalizada, compuesta por las siguientes tablas:
 
@@ -71,7 +71,7 @@ El sistema utiliza una base de datos relacional normalizada, compuesta por las s
 
 ---
 
-##  5. Relaciones entre Tablas
+##   Relaciones entre Tablas
 
 ###  Relaciones 1 a Muchos (1:N)
 
@@ -179,7 +179,7 @@ Desglosa los productos incluidos en cada venta, permitiendo manejar múltiples p
 
 ---
 
-## ⚙️ 8. Flujo del Sistema
+##  Flujo del Sistema
 
 1. El usuario interactúa con la interfaz (Vista)
 2. La Vista envía una solicitud al Controller
@@ -207,7 +207,7 @@ public class Producto
 
 ---
 
-### 🎮 Controlador (Controller)
+###  Controlador (Controller)
 
 ```csharp
 public IActionResult Index()
@@ -237,7 +237,7 @@ Ejemplo conceptual:
 
 ---
 
-##  10. Buenas Prácticas Implementadas
+##   Buenas Prácticas Implementadas
 
 * Uso del patrón MVC
 * Separación de responsabilidades
